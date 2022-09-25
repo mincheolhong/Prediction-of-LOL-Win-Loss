@@ -7,13 +7,25 @@
 
 # 데이터 수집
 * 어떻게 수집할까?   
-  * op.gg 롤 전적 검색 사이트에서 랭킹 검색을 통해 페이지 5300 ~ 16000 에서 골드1~5 구간의 플레이어들어들의 정보를 찾을 수 있음을 확인했다.   
-    https://www.op.gg/leaderboards/tier?region=kr&page=5300   
-    https://www.op.gg/leaderboards/tier?region=kr&page=16000
+  * op.gg 롤 전적 검색 사이트
+  * Riot api
 - 얼마나 수집할까?
   - 일단 만 개를 목표로 수집해보자.
 - 어떤 데이터를 수집할까?
   - 1게임 단위로 플레이어들의 실력의 지표가 되는 데이터들을 수집하자
     - 골드, 경험치, cs, kda 등등의 최근 10경기 데이터
     
-  
+# Riot API
+다음의 탭들에서 해당 정보를 가져올 수 있는 api가 있다
+
+ * SUMMONER-V4
+   * Get a summoner by summoner name
+ * LEAGUE-V4
+   * Get all the league entries
+ * MATCH-V5
+   * Get a list of match ids by puuid
+   * Get a match by match id
+   * Get a match timeline by match id
+ * SPECTATOR-V4
+   * Get current game information for the given summoner ID
+   * Get list of featured games
